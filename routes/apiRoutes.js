@@ -10,12 +10,12 @@ api.get('/', (req, res) => {
 });
 
 // GET route for a specific note
-api.get('/:note_id', (req, res) => {
-    const noteId = req.params.note_id;
+api.get('/:id', (req, res) => {
+    const noteId = req.params.id;
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
-            const result = json.filter((note) => note.note_id === noteId);
+            const result = json.filter((note) => note.id === noteId);
             return result.length > 0
                 ? res.json(result)
                 : res.json('No note with that ID');
@@ -23,20 +23,20 @@ api.get('/:note_id', (req, res) => {
 });
 
 //DELETE route for a specific note
-api.delete('/:note_id', (req, res) => {
-    const noteId = req.params.note_id;
+api.delete('/:id', (req, res) => {
+    const noteId = req.params.id;
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
 
-            const result = json.filter((note) => note.note_id !== noteId);
+            const result = json.filter((note) => note.id !== noteId);
 
 
 
             writeToFile('./db/db.json', result);
 
 
-            res.json(`Note ${noteId} has been deleted`);
+            res.json(result);
 
         });
 });
@@ -49,7 +49,7 @@ api.post('/', (req, res) => {
 
     const newNote = {
 
-        note_id: uuidv4(),
+        id: uuidv4(),
         title, text
     };
 

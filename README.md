@@ -30,7 +30,7 @@ The following images show how the web application will look like:
 ![NoteTaker empty](Assets/note-taker2.PNG)
 
 
-![NoteTaker example](Assets/note-taker2.PNG)
+![NoteTaker example](![Alt text](Assets/note-taker.PNG))
 
   ## [Contributing](#table-of-contents)
 

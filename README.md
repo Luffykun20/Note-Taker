@@ -24,10 +24,12 @@ To install this application, clone the repository's code, open it in VS Code, op
     
 Click the + button on top right of the webpage to create a new note. Enter a title for your note, then write your note in the body, and press the save button. The new note will be showed in the left column of the webpage. To delete a note, press the red trash can next to the note.
 
-To try or use the application, please follow the next link: 
+To try or use the application, please follow the next link: [NoteTaker](https://enigmatic-lake-18808.herokuapp.com/)
 
 The following images show how the web application will look like:
 ![NoteTaker empty](Assets/note-taker2.PNG)
+
+
 ![NoteTaker example](Assets/note-taker2.PNG)
 
   ## [Contributing](#table-of-contents)
